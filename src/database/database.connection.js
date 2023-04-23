@@ -7,7 +7,8 @@ const mongoClient = new MongoClient(process.env.DATABASE_URL);
 try {
   await mongoClient.connect();
   console.log("MongoDB conectado!");
-} catch (err) {
-  console.log(err.message);
+} catch (erro) {
+  console.log(erro.message);
 }
+
 export const db = mongoClient.db();
