@@ -43,9 +43,7 @@ export async function signin(req, res) {
       await db
         .collection("sessoes")
         .insertOne({ token, idUsuario: usuario._id });
-      res
-        .status(200)
-        .send({ token, nome: usuario.nome, idUsuario: usuario._id });
+      res.status(200).send({ token, nome: usuario.nome });
     }
   } catch (erro) {
     res.status(500).send(erro.message);

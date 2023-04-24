@@ -1,81 +1,53 @@
-Documentação grosseira:
+## Requisições
 
-//Post "/sign-up";
-Espera um BODY no formato:
-{
-nome,
-email,
-senha,
-},
-e então adiciona um objeto no formato:
-{
-\_id,
-nome,
-email,
-senha,
-},
-na collection "usuarios".
+| post | /sign-up |
+| ---- | -------- |
 
-//Post "/sign-in";
-Espera um BODY no formato:
-{
-email,
-senha,
-},
-adiciona um objeto no formato:
-{
-\_id,
-token,
-idUsuario,
-},
-na collection "sessoes", onde "idUsuario" equivale ao "\_id" de algum objeto na collection "usuarios",
-e então retorna um objeto no formato
-{
-token,
-idUsuario,
-nome,
-}, como resposta.
+Espera um [body] no formato:
 
-//Post "/nova-transacao";
-Espera um HEADERS com titulo "authorization" no formato:
-{
-"Bearer ${token}"
-}
-(
-ATENÇÃO:
-"token" neste objeto deve ter equivalência a algum "token" existente na collection "sessoes"
-),
-espera um BODY no formato:
-{
-titulo,
-valor,
-tipo,
-},
-e adiciona um objeto no formato:
-{
-\_id,
-titulo,
-valor,
-tipo,
-data,
-idUsuario,
-},
-na collection "transacoes", onde "idUsuario" equivale ao "id" de algum objeto na collection "usuarios".
+> {nome, email, senha}
 
-//Get "/historico-transacao";
-Espera um HEADERS com titulo "authorization" no formato:
-{
-"Bearer ${token}"
-}
-(
-ATENÇÃO: "token" neste objeto deve ter equivalência a algum "token" existente na collection "sessoes"
-),
-e retorna um ARRAY de objetos no formato:
-{
-\_id,
-titulo,
-valor,
-tipo,
-data,
-idUsuario,
-}.
+Insere na collection [usuarios]:
+
+> {nome, email, senha}
+
+| post | /sign-in |
+| ---- | -------- |
+
+Espera um [body] no formato:
+
+> {nome, senha}
+
+Insere na collection [sessoes]:
+
+> {token, idUsuario}
+
+Retorna como resposta:
+
+> {token, nome}
+
+| get | /historico-transacao |
+| --- | -------------------- |
+
+Espera um [headers] no formato:
+
+> {Authorization: Bearer token}
+
+Retorna como resposta um array de objetos no formato:
+
+> {titulo, valor, tipo, data}
+
+| post | /nova-transacao |
+| ---- | --------------- |
+
+Espera um [headers] no formato:
+
+> {Authorization: Bearer token}
+
+Espera um [body] no formato:
+
+> {titulo, valor, tipo}
+
+Insere na collection [transacoes]:
+
+> {titulo, valor,tipo, data, idUsuario}
