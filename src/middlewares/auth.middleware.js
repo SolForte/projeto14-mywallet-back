@@ -22,7 +22,7 @@ export async function authValidation(req, res, next) {
       res.status(401).send("ID de usuário não existe no banco de dados");
       return;
     }
-    res.locals.sessao = sessao;
+    res.locals.usuario = usuario;
     next();
   } catch (erro) {
     res.status(500).send(erro.message);
