@@ -12,7 +12,9 @@ export async function authValidation(req, res, next) {
   try {
     const sessao = await db.collection("sessoes").findOne({ token });
     if (!sessao) {
-      res.status(401).send("Token expirado");
+      res
+        .status(401)
+        .send("Token inexistente. Por favor realize logout e entre novamente.");
       return;
     }
     const usuario = await db
