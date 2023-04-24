@@ -29,7 +29,7 @@ export async function signin(req, res) {
   try {
     const usuario = await db.collection("usuarios").findOne({ email });
     if (!usuario) {
-      res.status(409).send("Usuário não existe");
+      res.status(404).send("E-mail não cadastrado");
       return;
     }
 
