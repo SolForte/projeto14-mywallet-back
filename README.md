@@ -6,7 +6,6 @@ Espera um BODY no formato:
 nome,
 email,
 senha,
-confirmarSenha,
 },
 e então adiciona um objeto no formato:
 {
