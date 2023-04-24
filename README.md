@@ -33,6 +33,7 @@ e então retorna um objeto no formato
 {
 token,
 idUsuario,
+nome,
 }, como resposta.
 
 //Post "/nova-transacao";
