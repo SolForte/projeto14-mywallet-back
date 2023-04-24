@@ -6,7 +6,7 @@ export const cadastroSchema = joi.object({
   nome: joi.string().required().min(MINIMUM_LENGTH),
   email: joi.string().email().required(),
   senha: joi.string().required().min(MINIMUM_LENGTH),
-  confirmar_senha: joi.valid(joi.ref("senha")).required(),
+  confirmarSenha: joi.valid(joi.ref("senha")).required(),
 });
 
 export const loginSchema = joi.object({
