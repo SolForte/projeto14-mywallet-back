@@ -28,11 +28,11 @@ The following dependencies were used in this project:
 ```bash
 npm install
 ```
-3. Create a `/.env` file and add the environment variable `DATABASE_URL` with the address of your database. Example:
+3. Create a `/.env` file and add the environment variable `DATABASE_URL` with the address of your database. An example of `/.env` file is avaiable on `/.env.example`:
 ```
 DATABASE_URL=http://localhost:3000
 ```
-4. Run the app
+4. Run the app with
 ```bash
 npm start
 ````
