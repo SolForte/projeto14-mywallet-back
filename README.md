@@ -21,3 +21,18 @@ The following dependencies were used in this project:
 )
 ![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 )
+
+## How to run
+1. Clone this repository;
+2. Install Dependencies;
+```bash
+npm install
+```
+3. Create a `/.env` file and add the environment variable `DATABASE_URL` with the address of your database. Example:
+```
+DATABASE_URL=http://localhost:3000
+```
+4. Run the app with;
+```bash
+npm start
+````
