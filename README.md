@@ -11,7 +11,7 @@ This project is a web API. Implemented features are:
 </ul>
 
 ## Technologies
-The following dependencies were used in this project:
+The following dependencies and technologies were used in this project:
 
 ![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 )
