@@ -23,8 +23,8 @@ The following dependencies were used in this project:
 )
 
 ## How to run
-1. Clone this repository;
-2. Install Dependencies;
+1. Clone this repository
+2. Install Dependencies
 ```bash
 npm install
 ```
@@ -32,7 +32,7 @@ npm install
 ```
 DATABASE_URL=http://localhost:3000
 ```
-4. Run the app with;
+4. Run the app
 ```bash
 npm start
 ````
