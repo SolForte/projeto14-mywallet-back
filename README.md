@@ -1,53 +1,23 @@
-## Requisições
+# My Wallet
+My Wallet is a finance management application.
 
-| post | /sign-up |
-| ---- | -------- |
+## About
+This project is a web API. Implemented features are:
+<ul>
+  <li>Sign Up;</li>
+  <li>Sign In;</li>
+  <li>Get Transaction History;</li>
+  <li>Add Expense/Revenue (Transaction).</li>
+</ul>
 
-Espera um [body] no formato:
+## Technologies
+The following dependencies were used in this project:
 
-> {nome, email, senha}
-
-Insere na collection [usuarios]:
-
-> {nome, email, senha}
-
-| post | /sign-in |
-| ---- | -------- |
-
-Espera um [body] no formato:
-
-> {nome, senha}
-
-Insere na collection [sessoes]:
-
-> {token, idUsuario}
-
-Retorna como resposta:
-
-> {token, nome}
-
-| get | /historico-transacao |
-| --- | -------------------- |
-
-Espera um [headers] no formato:
-
-> {Authorization: Bearer token}
-
-Retorna como resposta um array de objetos no formato:
-
-> {titulo, valor, tipo, data}
-
-| post | /nova-transacao |
-| ---- | --------------- |
-
-Espera um [headers] no formato:
-
-> {Authorization: Bearer token}
-
-Espera um [body] no formato:
-
-> {titulo, valor, tipo}
-
-Insere na collection [transacoes]:
-
-> {titulo, valor,tipo, data, idUsuario}
+![javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+)
+![express](https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white
+)
+![node](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
+)
+![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+)
